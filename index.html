@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hendra Hermawan — Front-End Web Developer</title>
+  <meta name="description" content="Portofolio Hendra Hermawan — Front-End Web Developer & Lulusan Teknik Informatika (IPK 3.68). Siap berkontribusi membangun produk web modern, responsif, dan bernilai estetika tinggi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Langsung ke konten</a>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Navigasi utama">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Hendra®</a>
+    <div class="nav-links">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#experience">Pendidikan &amp; Pengalaman</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#work">Proyek <sup>(04)</sup></a>
+      <a href="#contact">Kontak</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Buka menu" aria-expanded="false" onclick="toggleMenu()">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- FULLSCREEN MENU -->
+<div class="menu-overlay" id="menuOverlay" role="dialog" aria-label="Menu navigasi">
+  <img src="docs/hendra-halfbody.webp" alt="" class="menu-overlay-bg-img" aria-hidden="true">
+  <button class="menu-close" aria-label="Tutup menu" onclick="toggleMenu()">&times;</button>
+  <nav class="menu-nav">
+    <a href="#hero" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">Tentang</a>
+    <a href="#experience" onclick="toggleMenu()">Pendidikan &amp; Pengalaman</a>
+    <a href="#skills" onclick="toggleMenu()">Keahlian</a>
+    <a href="#work" onclick="toggleMenu()">Proyek</a>
+    <a href="#contact" onclick="toggleMenu()">Kontak</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div id="main"></div>
+  
+  <!-- Framer Grid Lines & Crosshairs -->
+  <div class="hero-grid-overlay" aria-hidden="true">
+    <div class="grid-line grid-line-h h-1"></div>
+    <div class="grid-line grid-line-h h-2"></div>
+    <div class="grid-line grid-line-h h-3"></div>
+    <div class="grid-line grid-line-v v-1"></div>
+    <div class="grid-line grid-line-v v-2"></div>
+    <div class="grid-line grid-line-v v-3"></div>
+
+    <span class="crosshair cross-1">+</span>
+    <span class="crosshair cross-2">+</span>
+    <span class="crosshair cross-3">+</span>
+    <span class="crosshair cross-4">+</span>
+    <span class="crosshair cross-5">+</span>
+    <span class="crosshair cross-6">+</span>
+    <span class="crosshair cross-7">+</span>
+    <span class="crosshair cross-8">+</span>
+    <span class="crosshair cross-9">+</span>
+  </div>
+
+  <!-- Giant Background Name Watermark -->
+  <div class="hero-watermark" aria-hidden="true">HENDRA</div>
+
+  <!-- Hero Portrait — Centered Half-Body Cutout (WebP, PNG fallback) -->
+  <picture class="hero-portrait">
+    <source srcset="docs/hendra-halfbody.webp" type="image/webp">
+    <img src="docs/hendra-halfbody.png" width="720" height="1079"
+         alt="Hendra Hermawan, lulusan Teknik Informatika Universitas Halim Sanusi Bandung"
+         class="hero-portrait-img" fetchpriority="high" decoding="async">
+  </picture>
+
+  <div class="container hero-content">
+    <!-- Top status row -->
+    <div class="hero-top-status">
+      <div class="hero-status-pill reveal">
+        <span class="status-indicator"></span>
+        <span>TERSEDIA UNTUK BEKERJA</span>
+      </div>
+      <div class="hero-role-pill reveal">
+        <span>FRONT-END WEB DEVELOPER</span>
+      </div>
+    </div>
+
+    <!-- Main Hero Balanced Split -->
+    <div class="hero-split-wrap">
+      <!-- Left side: Intro, Title & Direct CTA -->
+      <div class="hero-col hero-intro-box reveal">
+        <span class="hero-year">&copy;2026 &mdash; Kandidat Front-End</span>
+        <h1 class="hero-name-big">HENDRA<br><span class="hero-name-sub">HERMAWAN</span></h1>
+        <p class="hero-bio-short">
+          Lulusan S1 Teknik Informatika (IPK 3.68) yang berfokus membangun antarmuka web modern, cepat, dan responsif dengan integrasi visual yang presisi.
+        </p>
+
+        <div class="hero-actions">
+          <a href="mailto:hendra03174@gmail.com" class="hero-btn-primary" aria-label="Kirim Email ke Hendra">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/>
+            </svg>
+            <span>Kirim Email</span>
+          </a>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="hero-btn-secondary" aria-label="Hubungi Hendra lewat WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right side: Key Qualification Badges -->
+      <div class="hero-col hero-quick-cards reveal">
+        <div class="quick-card">
+          <div class="quick-top">
+            <span class="quick-badge">PENDIDIKAN</span>
+            <span class="quick-star">✱</span>
+          </div>
+          <span class="quick-val">3.68</span>
+          <span class="quick-label">IPK S1 Teknik Informatika — Univ. Halim Sanusi</span>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-top">
+            <span class="quick-badge">KOMPETENSI</span>
+            <span class="quick-star">✱</span>
+          </div>
+          <span class="quick-val">9+</span>
+          <span class="quick-label">Tech Stack &amp; Software Desain Dikuasai</span>
+        </div>
+
+        <div class="quick-card quick-card-socials">
+          <div class="quick-top">
+            <span class="quick-badge">PROFIL RESMI</span>
+            <span class="quick-star">✱</span>
+          </div>
+          <div class="quick-social-links">
+            <a href="https://linkedin.com/in/hendra-hermawan" target="_blank" rel="noopener" class="quick-soc-link">
+              <span>LinkedIn</span> <span class="arrow">↗</span>
+            </a>
+            <a href="https://instagram.com/iamhendra003" target="_blank" rel="noopener" class="quick-soc-link">
+              <span>Instagram</span> <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND / SKILL TICKER STRIP -->
+<div class="brands-strip" aria-label="Teknologi dan Keahlian Utama">
+  <div class="container brands-inner">
+    <span class="brands-label">KAPABILITAS UTAMA</span>
+    <div class="brands-list">
+      <span class="brand-item">FRONT-END WEB</span>
+      <span class="brand-item">HTML5 &amp; CSS3</span>
+      <span class="brand-item">JAVASCRIPT (ES6+)</span>
+      <span class="brand-item">PYTHON</span>
+      <span class="brand-item">FIGMA UI/UX</span>
+      <span class="brand-item">PHOTOSHOP</span>
+      <span class="brand-item">CORELDRAW</span>
+      <span class="brand-item">CANVA</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT ME -->
+<section class="impact" id="about" aria-label="Tentang Saya">
+  <div class="container">
+    <div class="section-badge reveal">
+      <span class="star-icon">✱</span> TENTANG SAYA
+    </div>
+    
+    <div class="impact-header reveal">
+      <h2 class="impact-title">
+        MEMADUKAN LOGIKA <span class="title-outline">FRONT-END</span> &amp; SENTUHAN DESAIN
+      </h2>
+      <span class="giant-asterisk" aria-hidden="true">✱</span>
+    </div>
+
+    <!-- About Bento Grid -->
+    <div class="bento-grid">
+      <!-- Card 1: Siapa Saya -->
+      <div class="bento-card bento-bio reveal">
+        <div class="card-badge"><span class="star-icon">✱</span> PROFIL PRIBADI</div>
+        <h3 class="bento-card-title">Siapa Saya?</h3>
+        <p class="bento-desc">
+          Halo, saya <strong>Hendra Hermawan</strong>, lulusan S1 Teknik Informatika dari Bandung yang memiliki ketertarikan mendalam pada pengembangan antarmuka web (Front-End) dan desain digital.
+        </p>
+        <p class="bento-desc" style="margin-top: 0.85rem;">
+          Saya terbiasa menerjemahkan rancangan antarmuka visual menjadi baris kode yang bersih, semantik, responsif, dan mudah dipelihara. Pemahaman ganda antara logika pemrograman dan prinsip desain memungkinkan saya bekerja efisien secara mandiri maupun dalam tim.
+        </p>
+      </div>
+
+      <!-- Card 2: Fokus Front-End -->
+      <div class="bento-card bento-stat reveal">
+        <div class="card-badge"><span class="star-icon">✱</span> FOKUS PENGEMBANGAN</div>
+        <div class="bento-number">100%</div>
+        <p class="bento-desc">Responsif lintas perangkat, performa halaman yang cepat, dan aksesibilitas ramah pengguna di setiap proyek.</p>
+      </div>
+
+      <!-- Card 3: Etos & Kesiapan Kerja -->
+      <div class="bento-card bento-stat reveal">
+        <div class="card-badge"><span class="star-icon">✱</span> STATUS KERJA</div>
+        <div class="bento-number">READY</div>
+        <p class="bento-desc">Siap bergabung segera untuk posisi Front-End Web Developer, baik sistem kerja On-site (Bandung/sekitarnya), Hybrid, maupun Remote.</p>
+      </div>
+
+      <!-- Card 4: Keunggulan Kompetitif -->
+      <div class="bento-card bento-highlight reveal">
+        <div class="card-badge"><span class="star-icon">✱</span> NILAI TAMBAH</div>
+        <h3 class="bento-card-title" style="margin-top:0.75rem; font-size:1.35rem; color:var(--white);">Kemampuan Desain Grafis Mandiri</h3>
+        <p class="bento-desc">
+          Selain menguasai HTML, CSS, dan JavaScript, saya mahir mengoperasikan Figma, Adobe Photoshop, CorelDraw, dan Canva sehingga proses slicing desain ke web menjadi presisi tanpa miskomunikasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & EXPERIENCE -->
+<section class="experience-sec" id="experience" aria-label="Pendidikan dan Pengalaman">
+  <div class="container">
+    <div class="section-badge reveal">
+      <span class="star-icon">✱</span> REKAM JEJAK
+    </div>
+
+    <div class="work-header reveal">
+      <h2 class="work-title">PENDIDIKAN &amp; <span class="title-outline">PENGALAMAN.</span></h2>
+    </div>
+
+    <div class="track-grid">
+      <!-- Column 1: Pendidikan -->
+      <div class="track-col reveal">
+        <div class="track-col-header">
+          <div class="track-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 10v6"/></svg>
+          </div>
+          <div>
+            <h3 class="track-col-title">Riwayat Pendidikan</h3>
+            <span class="track-col-sub">Fondasi akademis &amp; rekayasa perangkat lunak</span>
+          </div>
+        </div>
+
+        <div class="track-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <span class="timeline-year">2020 — 2024</span>
+                <span class="timeline-badge">IPK 3.68 / 4.00</span>
+              </div>
+              <h4 class="timeline-role">S1 Teknik Informatika</h4>
+              <span class="timeline-org">Universitas Halim Sanusi (UHS) Bandung</span>
+              <p class="timeline-desc">
+                Menyelesaikan studi sarjana dengan predikat Sangat Memuaskan. Mendalami Rekayasa Perangkat Lunak, Pemrograman Web Berorientasi Objek, Basis Data Relasional, serta Interaksi Manusia &amp; Komputer (HCI).
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Pemrograman Web</span>
+                <span class="tag">Struktur Data</span>
+                <span class="tag">UI/UX &amp; HCI</span>
+                <span class="tag">Rekayasa Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Pengalaman -->
+      <div class="track-col reveal">
+        <div class="track-col-header">
+          <div class="track-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <h3 class="track-col-title">Riwayat Pengalaman</h3>
+            <span class="track-col-sub">Implementasi proyek praktis &amp; karya nyata</span>
+          </div>
+        </div>
+
+        <div class="track-timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <span class="timeline-year">2024 — Sekarang</span>
+                <span class="timeline-badge-sec">Web Development</span>
+              </div>
+              <h4 class="timeline-role">Front-End Web Developer</h4>
+              <span class="timeline-org">Proyek Mandiri &amp; Klien</span>
+              <p class="timeline-desc">
+                Mengembangkan website company profile responsif (Pankrea.id) dan prototipe aplikasi web keuangan dengan HTML5 semantik, modern CSS Grid/Flexbox, dan JavaScript murni yang ringan dan cepat diakses.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">HTML5/CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive Web</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <span class="timeline-year">2023 — Sekarang</span>
+                <span class="timeline-badge-sec">Desain &amp; UI/UX</span>
+              </div>
+              <h4 class="timeline-role">Desainer Grafis &amp; UI Specialist</h4>
+              <span class="timeline-org">Eksplorasi Kreatif &amp; Kolaborasi</span>
+              <p class="timeline-desc">
+                Merancang prototipe antarmuka di Figma, memproduksi materi promosi digital dan identitas merek menggunakan Adobe Photoshop, CorelDraw, dan Canva dengan keselarasan tipografi dan warna.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Photoshop</span>
+                <span class="tag">CorelDraw</span>
+                <span class="tag">Canva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION WITH LOGOS -->
+<section class="skills-sec" id="skills" aria-label="Keahlian dan Software">
+  <div class="container">
+    <div class="section-badge reveal">
+      <span class="star-icon">✱</span> TOOLSET &amp; KEAHLIAN
+    </div>
+
+    <div class="impact-header reveal">
+      <h2 class="impact-title">
+        KEAHLIAN <span class="title-outline">DENGAN LOGO</span> &amp; SOFTWARE
+      </h2>
+      <span class="giant-asterisk" aria-hidden="true">✱</span>
+    </div>
+    <p class="skills-subtitle reveal">
+      Teknologi front-end yang saya gunakan untuk memprogram web dan rangkaian software desain untuk mewujudkan antarmuka kreatif.
+    </p>
+
+    <!-- Skills Cards Grid -->
+    <div class="skills-grid">
+      <!-- Skill 1: HTML5 -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="HTML5">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <path fill="#E34F26" d="M3 2l1.8 20.2L12 24l7.2-1.8L21 2H3z"/>
+              <path fill="#EF652A" d="M12 3.8v18.3l5.8-1.5 1.5-16.8H12z"/>
+              <path fill="#FFF" d="M12 8.4H7.5l.3 3.6h4.2V8.4zm0 7.1l-2.7-.7-.2-2.1H7.3l.3 4.2 4.4 1.2V15.5z"/>
+              <path fill="#EBEBEB" d="M12 8.4v3.6h4.2l-.4 4.2-3.8 1v2.1l5.8-1.6.8-9.3H12z"/>
+            </svg>
+          </div>
+          <span class="skill-cat">FRONT-END</span>
+        </div>
+        <h3 class="skill-name">HTML5</h3>
+        <p class="skill-desc">Struktur kode web semantik, penataan elemen yang rapi, ramah SEO dasar, dan mendukung aksesibilitas layar (a11y).</p>
+      </div>
+
+      <!-- Skill 2: CSS3 -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="CSS3">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <path fill="#1572B6" d="M3 2l1.8 20.2L12 24l7.2-1.8L21 2H3z"/>
+              <path fill="#33A9DC" d="M12 3.8v18.3l5.8-1.5 1.5-16.8H12z"/>
+              <path fill="#FFF" d="M12 8.4H7.5l.3 3.6h4.2V8.4zm0 7.1l-2.7-.7-.2-2.1H7.3l.3 4.2 4.4 1.2V15.5z"/>
+              <path fill="#EBEBEB" d="M12 8.4v3.6h4.2l-.4 4.2-3.8 1v2.1l5.8-1.6.8-9.3H12z"/>
+            </svg>
+          </div>
+          <span class="skill-cat">STYLING</span>
+        </div>
+        <h3 class="skill-name">CSS3</h3>
+        <p class="skill-desc">Tata letak modern dengan Flexbox dan CSS Grid, Custom Properties (Variables), animasi halus, dan responsif lintas ukuran monitor.</p>
+      </div>
+
+      <!-- Skill 3: JavaScript -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="JavaScript">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <rect width="24" height="24" rx="4" fill="#F7DF1E"/>
+              <path fill="#000" d="M6.5 18.2l1.8-1.1c.3.6.7 1 1.4 1 .7 0 1.1-.3 1.1-.9v-5.4h2.2v5.4c0 1.8-1.1 2.7-3.1 2.7-1.7 0-2.8-.8-3.4-1.7zm7.5-.2l1.8-1c.4.7 1 1.2 1.9 1.2.8 0 1.3-.4 1.3-1 0-.7-.5-.9-1.5-1.4l-.5-.2c-1.5-.6-2.5-1.5-2.5-3 0-1.5 1.2-2.7 3-2.7 1.3 0 2.2.5 2.9 1.6l-1.7 1.1c-.3-.6-.7-.9-1.2-.9-.6 0-.9.3-.9.7 0 .5.4.8 1.3 1.2l.5.2c1.8.8 2.8 1.6 2.8 3.2 0 1.8-1.4 2.8-3.4 2.8-1.9 0-3.1-.9-3.8-2z"/>
+            </svg>
+          </div>
+          <span class="skill-cat">LOGIKA UI</span>
+        </div>
+        <h3 class="skill-name">JavaScript (ES6+)</h3>
+        <p class="skill-desc">Manipulasi DOM dinamis, penanganan event interaktif, Fetch API, asynchronous flow, dan logika aplikasi web di sisi klien.</p>
+      </div>
+
+      <!-- Skill 4: Python -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="Python">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <path fill="url(#py-grad1)" d="M11.9 2c-5.3 0-5 2.3-5 2.3l.1 2.4h5.1v.7H4.9S2 7.1 2 12.3s2.6 5 2.6 5l1.5-.1v-2.2s-.1-2.6 2.5-2.6h4.3s2.4-.1 2.4-2.4V4.4s.4-2.4-3.4-2.4zm-1.4 1.5a.8.8 0 110 1.6.8.8 0 010-1.6z"/>
+              <path fill="url(#py-grad2)" d="M12.1 22c5.3 0 5-2.3 5-2.3l-.1-2.4h-5.1v-.7h7.2s2.9.3 2.9-4.9-2.6-5-2.6-5l-1.5.1v2.2s.1 2.6-2.5 2.6h-4.3s-2.4.1-2.4 2.4v5.3s-.4 2.4 3.4 2.4zm1.4-1.5a.8.8 0 110-1.6.8.8 0 010 1.6z"/>
+              <defs>
+                <linearGradient id="py-grad1" x1="2" y1="2" x2="16.9" y2="16.9" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#387EB8"/><stop offset="1" stop-color="#366994"/>
+                </linearGradient>
+                <linearGradient id="py-grad2" x1="22" y1="22" x2="7.1" y2="7.1" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFE052"/><stop offset="1" stop-color="#FFC331"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="skill-cat">BAHASA</span>
+        </div>
+        <h3 class="skill-name">Python</h3>
+        <p class="skill-desc">Dasar pemrograman back-end, pemrosesan logika algoritma, automasi script sederhana, dan analisis data mendasar.</p>
+      </div>
+
+      <!-- Skill 5: Git & GitHub -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="Git & GitHub">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <path fill="#F05032" d="M22.6 10.7L13.3 1.4c-.6-.6-1.5-.6-2.1 0L9.4 3.2l2.7 2.7c.6-.2 1.3-.1 1.8.4.5.5.7 1.3.4 1.9l2.6 2.6c.7-.3 1.4-.1 1.9.4.8.8.8 2 0 2.8-.8.8-2 .8-2.8 0-.5-.5-.7-1.3-.4-1.9L13.1 9.5v5.3c.3.2.5.5.6.8.5.8.3 1.9-.5 2.5-.8.5-1.9.3-2.5-.5-.5-.8-.3-1.9.5-2.5.3-.2.6-.3.9-.3V9.3L9.6 11.4c.1.2.2.5.2.8 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.3 0 .6.1.9.2L9.3 7.7 2.1 14.9c-.6.6-.6 1.5 0 2.1l9.3 9.3c.6.6 1.5.6 2.1 0l9.1-9.1c.6-.6.6-1.6 0-2.2z"/>
+            </svg>
+          </div>
+          <span class="skill-cat">KONTROL VERSI</span>
+        </div>
+        <h3 class="skill-name">Git &amp; GitHub</h3>
+        <p class="skill-desc">Pengelolaan repositori kode, pencatatan commit riwayat kerja, pembuatan branch fitur, dan kolaborasi tim terorganisir.</p>
+      </div>
+
+      <!-- Skill 6: Figma -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="Figma">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <path fill="#F24E1E" d="M8 2a4 4 0 00-4 4 4 4 0 004 4h4V2H8z"/>
+              <path fill="#A259FF" d="M8 10a4 4 0 00-4 4 4 4 0 004 4h4v-8H8z"/>
+              <path fill="#0ACF83" d="M8 18a4 4 0 00-4 4 4 4 0 004 4 4 4 0 004-4v-4H8z"/>
+              <path fill="#FF7262" d="M16 2h-4v8h4a4 4 0 004-4 4 4 0 00-4-4z"/>
+              <path fill="#1ABCFE" d="M20 14a4 4 0 01-4 4h-4v-8h4a4 4 0 014 4z"/>
+            </svg>
+          </div>
+          <span class="skill-cat">UI/UX</span>
+        </div>
+        <h3 class="skill-name">Figma</h3>
+        <p class="skill-desc">Perancangan wireframe, prototype antarmuka interaktif, penataan design system token (warna &amp; tipografi), dan inspect CSS.</p>
+      </div>
+
+      <!-- Skill 7: Adobe Photoshop -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="Adobe Photoshop">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <rect width="24" height="24" rx="5" fill="#001E36"/>
+              <path fill="#31A8FF" d="M5.5 6.5h4.2c1.7 0 2.9.4 3.7 1.2.7.7 1 1.7 1 2.8 0 1.2-.4 2.2-1.1 3-.8.7-2 1.1-3.6 1.1H7.8v4.9H5.5V6.5zm2.3 2v4.2h1.8c.9 0 1.6-.2 2.1-.6.5-.4.7-1 .7-1.6 0-.6-.2-1.1-.6-1.5-.4-.4-1.1-.5-2-.5H7.8zm10.7 7.7c-.5.3-1.1.5-1.9.5-.7 0-1.2-.2-1.6-.5-.4-.4-.6-.9-.6-1.5 0-.5.2-1 .5-1.3.4-.3.9-.6 1.6-.9l.9-.3c.7-.2 1.2-.5 1.5-.9.3-.4.5-.8.5-1.4 0-.8-.3-1.4-.9-1.9-.6-.5-1.4-.7-2.4-.7-.6 0-1.2.1-1.7.4-.5.2-.9.5-1.3.9l1.1 1.4c.3-.3.6-.5.9-.6.4-.2.8-.2 1.2-.2.5 0 .9.1 1.2.4.3.2.4.6.4 1 0 .4-.2.7-.5 1-.3.2-.8.5-1.4.7l-.9.4c-.8.3-1.3.7-1.7 1.1-.4.5-.6 1.1-.6 1.8 0 .9.3 1.6.9 2.1.6.5 1.4.8 2.5.8.8 0 1.5-.2 2.2-.5v-1.9z"/>
+            </svg>
+          </div>
+          <span class="skill-cat">DESAIN GRAFIS</span>
+        </div>
+        <h3 class="skill-name">Adobe Photoshop</h3>
+        <p class="skill-desc">Editing citra digital, manipulasi foto, pembuatan aset visual web beresolusi tinggi, dan optimasi format gambar web.</p>
+      </div>
+
+      <!-- Skill 8: CorelDraw -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="CorelDraw">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <rect width="24" height="24" rx="5" fill="#0E7835"/>
+              <path fill="#FFF" d="M12 4.2c-4.3 0-7.8 3.5-7.8 7.8 0 3.7 2.6 6.8 6 7.6v-2.3c-2.2-.7-3.8-2.8-3.8-5.3 0-3 2.5-5.5 5.6-5.5s5.6 2.5 5.6 5.5c0 2.5-1.6 4.6-3.8 5.3v2.3c3.4-.8 6-3.9 6-7.6 0-4.3-3.5-7.8-7.8-7.8z"/>
+              <circle cx="12" cy="12" r="3" fill="#A4DB57"/>
+            </svg>
+          </div>
+          <span class="skill-cat">DESAIN VEKTOR</span>
+        </div>
+        <h3 class="skill-name">CorelDraw</h3>
+        <p class="skill-desc">Pembuatan ilustrasi berbasis vektor, rancangan logo brand, tipografi presisi, dan aset materi grafis siap pakai.</p>
+      </div>
+
+      <!-- Skill 9: Canva -->
+      <div class="skill-card reveal">
+        <div class="skill-card-top">
+          <div class="skill-icon-wrap" title="Canva">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none">
+              <rect width="24" height="24" rx="5" fill="url(#canva-bg)"/>
+              <path fill="#FFF" d="M14.5 16.5c-3.5 0-5.8-2.6-5.8-5.8s2.3-5.8 5.8-5.8c1.6 0 2.9.5 3.8 1.4l-1.3 1.5c-.7-.7-1.5-1-2.5-1-2.2 0-3.8 1.7-3.8 3.9s1.6 3.9 3.8 3.9c1 0 1.9-.3 2.6-1.1l1.3 1.5c-1 1-2.4 1.5-3.9 1.5z"/>
+              <defs>
+                <linearGradient id="canva-bg" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00C4CC"/><stop offset="1" stop-color="#7D2AE8"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="skill-cat">KONTEN VISUAL</span>
+        </div>
+        <h3 class="skill-name">Canva</h3>
+        <p class="skill-desc">Perancangan materi promosi cepat, layout presentasi profesional, dan pembuatan konten visual kreatif untuk media sosial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / PROJECTS -->
+<section class="work" id="work" aria-label="Proyek Pilihan">
+  <div class="container">
+    <div class="section-badge reveal">
+      <span class="star-icon">✱</span> PORTOFOLIO PROYEK
+    </div>
+    <div class="work-header reveal">
+      <h2 class="work-title">KARYA &amp; <span class="title-outline">PROYEK PILIHAN.</span></h2>
+    </div>
+
+    <div class="work-grid">
+      <!-- Project 1 -->
+      <article class="project-card reveal">
+        <div class="project-img-box project-1">
+          <div class="project-mockup">
+            <div class="mockup-header">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup-body">
+              <span class="mockup-tag">PANKREA.ID</span>
+              <p class="mockup-text">Company Profile Website</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-cat">/Front-End Web</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Pankrea.id</h3>
+          <p class="project-summary">Website profil perusahaan modern yang dikembangkan secara responsif menggunakan HTML5, modern CSS, dan JavaScript murni dengan penekanan pada kecepatan muat dan kejelasan navigasi.</p>
+          <div class="project-tech-tags">
+            <span class="ptag">HTML5</span>
+            <span class="ptag">CSS3</span>
+            <span class="ptag">JavaScript</span>
+            <span class="ptag">Responsive</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card reveal">
+        <div class="project-img-box project-2">
+          <div class="project-mockup">
+            <div class="mockup-header">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup-body">
+              <span class="mockup-tag">FINANCE APP</span>
+              <p class="mockup-text">Aplikasi Keuangan Ojol</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-cat">/Web Application</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3 class="project-name">Aplikasi Keuangan Ojol</h3>
+          <p class="project-summary">Aplikasi pembukuan harian ramah mobile untuk pengemudi ojek online dalam mengelola pemasukan dan pengeluaran secara cepat dengan antarmuka yang sangat ringkas.</p>
+          <div class="project-tech-tags">
+            <span class="ptag">JavaScript</span>
+            <span class="ptag">DOM Scripting</span>
+            <span class="ptag">Mobile-First</span>
+            <span class="ptag">UI/UX</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card reveal">
+        <div class="project-img-box project-3">
+          <div class="project-mockup">
+            <div class="mockup-header">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup-body">
+              <span class="mockup-tag">BRAND IDENTITY</span>
+              <p class="mockup-text">Desain Grafis &amp; Visual</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-cat">/Graphic Design</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-name">Eksplorasi Branding Visual</h3>
+          <p class="project-summary">Koleksi perancangan identitas merek, tipografi logo vektor, dan aset grafis promosi digital media sosial menggunakan CorelDraw, Adobe Photoshop, dan Figma.</p>
+          <div class="project-tech-tags">
+            <span class="ptag">CorelDraw</span>
+            <span class="ptag">Photoshop</span>
+            <span class="ptag">Figma</span>
+            <span class="ptag">Branding</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card reveal">
+        <div class="project-img-box project-4">
+          <div class="project-mockup coming-soon">
+            <span class="coming-soon-label">STUDI KASUS UI/UX</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-cat">/UI/UX Prototyping</span>
+            <span class="project-year">2026</span>
+          </div>
+          <h3 class="project-name">SaaS Dashboard Design</h3>
+          <p class="project-summary">Konsep perancangan antarmuka dashboard analitik bisnis dengan hierarki data terstruktur, sistem warna konsisten, dan prototipe komponen interaktif di Figma.</p>
+          <div class="project-tech-tags">
+            <span class="ptag">Figma</span>
+            <span class="ptag">Design System</span>
+            <span class="ptag">Prototyping</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact" aria-label="Kontak dan Rekrutmen">
+  <div class="container">
+    <!-- Huge Header Contact -->
+    <div class="contact-top-bar reveal">
+      <div class="contact-brand">HENDRA®</div>
+      <h2 class="contact-main-heading">HUBUNGI SAYA</h2>
+      <div class="contact-scroll-hint">&copy;2026 {Siap Bergabung}</div>
+    </div>
+
+    <!-- Contact Bento: 4 Info Tiles + Reach Out Form -->
+    <div class="contact-bento-grid">
+      <!-- Left side: 4 Info Tiles -->
+      <div class="contact-tiles-wrap reveal">
+        <div class="contact-tile">
+          <span class="tile-label">Lokasi Domisili:</span>
+          <p class="tile-value">Bandung, Jawa Barat<br>Indonesia (Siap On-site / Remote)</p>
+        </div>
+        <div class="contact-tile">
+          <span class="tile-label">Status Ketersediaan:</span>
+          <p class="tile-value">OPEN TO WORK<br><small style="color:var(--army-bright);">Penuh Waktu / Kontrak / Proyek</small></p>
+        </div>
+        <div class="contact-tile">
+          <span class="tile-label">WhatsApp (Chat Cepat):</span>
+          <p class="tile-value"><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="tile-link">Hubungi via WhatsApp ↗</a></p>
+        </div>
+        <div class="contact-tile">
+          <span class="tile-label">Email Langsung:</span>
+          <p class="tile-value"><a href="mailto:hendra03174@gmail.com" class="tile-link">hendra03174@gmail.com ↗</a></p>
+        </div>
+        
+        <div class="contact-cta-box">
+          <div class="card-badge"><span class="star-icon">✱</span> TERTARIK MEREKRUT?</div>
+          <h3 class="cta-box-title">MARI BICARAKAN PELUANG KERJA</h3>
+          <p style="font-size:0.88rem; color:rgba(255,255,255,0.75); margin-bottom:1.25rem;">
+            Saya siap berdiskusi terkait kebutuhan tim Anda atau proyek web yang ingin dikembangkan.
+          </p>
+          <div class="cta-btn-group">
+            <a href="mailto:hendra03174@gmail.com" class="btn-book">
+              <span>KIRIM EMAIL</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn-book btn-book-wa">
+              <span>WHATSAPP</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Direct Message Card -->
+      <div class="reach-card reveal">
+        <div class="reach-card-banner">
+          <span class="reach-brand">Hendra®</span>
+          <span style="font-size:0.75rem; letter-spacing:0.08em; opacity:0.8;">FORMULIR PESAN</span>
+        </div>
+        <div class="reach-card-body">
+          <h3 class="reach-title">Kirim Pesan ke Hendra</h3>
+          <form class="reach-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="form-name">Nama Lengkap / Perusahaan*</label>
+              <input type="text" id="form-name" placeholder="Nama Anda / Nama Tim HRD" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email Anda*</label>
+              <input type="email" id="form-email" placeholder="nama@perusahaan.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-msg">Pesan / Penawaran Kerja*</label>
+              <textarea id="form-msg" rows="4" placeholder="Tuliskan posisi yang ditawarkan atau detail proyek Anda..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">KIRIM PESAN SEKARANG</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Huge Footer Name -->
+    <div class="footer-huge-name reveal" aria-hidden="true">Hendra®</div>
+
+    <!-- Footer Links & Bottom -->
+    <div class="footer-bottom-grid reveal">
+      <div class="footer-col">
+        <span class="footer-col-title">Navigasi Halaman</span>
+        <ul class="footer-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">Tentang Saya</a></li>
+          <li><a href="#experience">Pendidikan &amp; Pengalaman</a></li>
+          <li><a href="#skills">Keahlian (Skills)</a></li>
+          <li><a href="#work">Proyek Portofolio</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-col-title">Saluran Komunikasi</span>
+        <ul class="footer-nav">
+          <li><a href="mailto:hendra03174@gmail.com">Email: hendra03174@gmail.com <span class="ext-arrow">↗</span></a></li>
+          <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp Chat <span class="ext-arrow">↗</span></a></li>
+          <li><a href="https://linkedin.com/in/hendra-hermawan" target="_blank" rel="noopener">LinkedIn Profil <span class="ext-arrow">↗</span></a></li>
+          <li><a href="https://instagram.com/iamhendra003" target="_blank" rel="noopener">Instagram (@iamhendra003) <span class="ext-arrow">↗</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col copyright-col">
+        <p class="footer-copy-text">&copy; 2026 Hendra Hermawan. Seluruh hak cipta dilindungi.</p>
+        <p class="footer-sub-text">Portofolio Personal Front-End Web Developer &mdash; Dirancang dengan standar web modern.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
