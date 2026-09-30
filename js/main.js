@@ -30,7 +30,7 @@ function handleContactSubmit(event) {
   // Pre-fill email client for recruiter inquiry
   const subject = encodeURIComponent(`Peluang Kerja / Kontak Portofolio dari ${name}`);
   const body = encodeURIComponent(`Halo Hendra,\n\nNama/Perusahaan: ${name}\nEmail: ${email}\n\nPesan / Tawaran Kerja:\n${msg}`);
-  window.location.href = `mailto:hendra03174@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:hendraworkdev@gmail.com?subject=${subject}&body=${body}`;
 
   if (statusEl) {
     statusEl.textContent = 'Membuka aplikasi email... Terima kasih atas pesannya!';
